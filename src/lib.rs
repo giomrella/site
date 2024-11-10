@@ -29,7 +29,7 @@ pub fn App() -> impl IntoView {
 
         <Router base="site">
 			<nav>
-			  <A href="">"Home"</A>"-"
+			  <A href="/">"Home"</A>"-"
 			  <A href="about">"About"</A>"-"
 			  <A href="contact">"Contact"</A>
 			</nav>
@@ -37,7 +37,7 @@ pub fn App() -> impl IntoView {
                 <Route path="/" view=Home/>
                 <Route path="/about" view=About/>
                 <Route path="/contact" view=Contact/>
-                <Route path="/*" view=Home/>
+                <Route path="/*" view=NotFound/>
             </Routes>
         </Router>
     }
