@@ -27,7 +27,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8"/>
         <Meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <Router base="/site">
+        <Router base="/site/">
 			<nav>
 			  <A href="">"Home"</A>"-"
 			  <A href="about">"About"</A>"-"
