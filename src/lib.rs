@@ -26,7 +26,7 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8"/>
         <Meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <Router>
+        <Router base="site">
             <Routes base="site".to_owned()>
                 <Route path="/" view=Home/>
                 <Route path="/*" view=NotFound/>
