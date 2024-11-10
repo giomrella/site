@@ -41,6 +41,7 @@ pub fn Home() -> impl IntoView {
 
                 <h1>"Welcome to my site!"</h1>
                 <p>"A site written in Rust using "<a href="https://github.com/leptos-rs/leptos" target="_blank">"Leptos"</a>" deployed on Github Pages"</p>
+                <p>"The backend will also be written in Rust and deployed on AWS Lambda"</p>
                 <div class="buttons">
                     <Button/>
                     <Button increment=5/>
