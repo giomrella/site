@@ -34,8 +34,11 @@ pub fn App() -> impl IntoView {
 			  <A href="contact">"Contact"</A>
 			</nav>
             <Routes base="site".to_owned()>
+                <Route path="" view=Home/>
                 <Route path="/" view=Home/>
+                <Route path="site" view=Home/>
                 <Route path="/site" view=Home/>
+                <Route path="/site/" view=Home/>
                 <Route path="/about" view=About/>
                 <Route path="/contact" view=Contact/>
                 <Route path="/*" view=NotFound/>
