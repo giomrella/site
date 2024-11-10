@@ -1,9 +1,15 @@
 use crate::components::counter_btn::Button;
 use leptos::*;
+use leptos_router::{use_location, use_route};
+use logging::log;
 
 /// Default Home Page
 #[component]
 pub fn Home() -> impl IntoView {
+    let location = use_location();
+    log!("home location: {:?}", location.pathname.get());
+    let route = use_route();
+    log!("home route: {}, original_route: {}", route.path(), route.original_path());
     view! {
         <ErrorBoundary fallback=|errors| {
             view! {
