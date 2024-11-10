@@ -6,8 +6,8 @@ use logging::log;
 #[component]
 pub fn NotFound() -> impl IntoView {
     let location = use_location();
-    log!("location: {location:?}");
+    log!("location: {:?}", location.pathname.get());
     let route = use_route();
-    log!("route: {route:?}");
+    log!("route: {}, {}", route.path(), route.original_path());
     view! { <h1>"Uh oh!" <br/> "We couldn't find that page!"</h1>  }
 }
