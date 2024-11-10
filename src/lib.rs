@@ -29,7 +29,7 @@ pub fn App() -> impl IntoView {
 
         <Router base="site">
 			<nav>
-			  <A href="/">"Home"</A>"-"
+			  <A href="">"Home"</A>"-"
 			  <A href="about">"About"</A>"-"
 			  <A href="contact">"Contact"</A>
 			</nav>
