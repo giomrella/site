@@ -1,6 +1,7 @@
 use leptos::*;
+use leptos::prelude::*;
 use leptos_meta::*;
-use leptos_router::*;
+use leptos_router::{components::{Router,Routes,Route}, path};
 
 // Modules
 mod components;
@@ -8,8 +9,12 @@ mod pages;
 
 // Top-Level pages
 use crate::pages::home::Home;
-#[allow(unused)]
 use crate::pages::not_found::NotFound;
+
+// components
+use crate::components::nav::Nav;
+
+#[allow(unused)]
 
 /// An app router which renders the homepage and handles 404's
 #[component]
@@ -18,7 +23,7 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
 
     view! {
-        <Html lang="en" dir="ltr" attr:data-theme="light"/>
+        <Html attr:lang="en" attr:dir="ltr" attr:data-theme="light"/>
 
         // sets the document title
         <Title text="gio"/>
@@ -27,23 +32,16 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8"/>
         <Meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <Router base="site">
-			<nav>
-			  <A href="">"Home"</A>"-"
-			  <A href="about">"About"</A>"-"
-			  <A href="contact">"Contact"</A>
-			</nav>
-            <Routes base="site".to_owned()>
-                <Route path="" view=Home/>
-                <Route path="/" view=Home/>
-                <Route path="//" view=Home/>
-                <Route path="site" view=Home/>
-                <Route path="site/" view=Home/>
-                <Route path="/site" view=Home/>
-                <Route path="/site/" view=Home/>
-                <Route path="/about" view=About/>
-                <Route path="/contact" view=Contact/>
-                <Route path="/*" view=NotFound/>
+        // <Router>
+        <Router base="/site">
+            <Nav />
+            <Routes fallback=NotFound>
+            // <ParentRoute path=path!("site") view=Home>
+                <Route path=path!("") view=Home/>
+                <Route path=path!("/about") view=About/>
+                <Route path=path!("/contact") view=Contact/>
+                // <Route path=path!("/*") view=NotFound/>
+            // </ParentRoute>
             </Routes>
         </Router>
     }

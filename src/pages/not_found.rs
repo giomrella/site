@@ -1,5 +1,6 @@
 use leptos::*;
-use leptos_router::{use_location, use_navigate};
+use leptos::prelude::*;
+use leptos_router::hooks::{use_location, use_navigate};
 
 /// 404 Not Found Page
 #[component]

@@ -50,3 +50,6 @@ button {
   text-align: center;
   margin: 2rem;
 }
+[aria-current]:not([aria-current="false"]) {
+  font-weight: bold;
+}

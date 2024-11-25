@@ -1,4 +1,5 @@
 use leptos::*;
+use leptos::prelude::*;
 use site::App;
 
 fn main() {

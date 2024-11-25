@@ -1,5 +1,6 @@
 use crate::components::counter_btn::Button;
 use leptos::*;
+use leptos::prelude::*;
 
 /// Default Home Page
 #[component]
@@ -25,20 +26,6 @@ pub fn Home() -> impl IntoView {
         }>
 
             <div class="container">
-
-                <picture>
-                    <source
-                        srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_pref_dark_RGB.svg"
-                        media="(prefers-color-scheme: dark)"
-                    />
-                    <img
-                        src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg"
-                        alt="Leptos Logo"
-                        height="200"
-                        width="400"
-                    />
-                </picture>
-
                 <h1>"Welcome to my site!"</h1>
                 <p>"A site written in Rust using "<a href="https://github.com/leptos-rs/leptos" target="_blank">"Leptos"</a>" deployed on Github Pages"</p>
                 <p>"The backend will also be written in Rust and deployed on AWS Lambda"</p>
